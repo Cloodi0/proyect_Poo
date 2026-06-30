@@ -1,5 +1,6 @@
 public class Conecta4 extends Juego implements Verificador{
-    
+
+    //Aqui ingresamos a nuestro constructor
     public Conecta4(String j1, String j2){
         super("Conecta 4", j1,j2);
         this.tablero = new Tablero(12,13); //relleno es de 3
