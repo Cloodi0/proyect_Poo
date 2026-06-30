@@ -1,15 +1,20 @@
-public class Conecta4 extends Tablero implements Verificador{
+public class Conecta4 extends Juego implements Verificador{
     
-    public Conecta4(Tablero tablero, int largo, int alto){
-        super(largo, alto);
+    public Conecta4(String j1, String j2){
+        super("Conecta 4", j1,j2);
+        this.tablero = new Tablero(12,13); //relleno es de 3
+    }
+    
+    public Tablero getTablero(){
+    	return this.tablero;
     }
     
     //Metodo para checar al ganador verificando los espacios de su alededor
     @Override
-    public boolean checarWin(int largo, int alto, Tablero tablero){ //pasamos parametros del tablero del juego
+    public boolean checarWin(int x, int y, Tablero tablero){ //pasamos parametros del tablero del juego
     	
-    	int a = largo;
-    	int b = alto;
+    	int a = x;
+    	int b = y;
     	
         boolean check = false;
         int [] cuenta = new int[8];
